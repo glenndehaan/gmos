@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setup system default files"
+echo "Setup system default files..."
 
 ln -svf ${GMOS}/proc/mounts ${GMOS}/etc/mtab
 
