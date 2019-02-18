@@ -6,4 +6,4 @@ cd /opt/gmos
 ./repackage.sh
 
 cd /mnt/gmos
-cp /opt/gmos/minimal_linux_live.iso /mnt/gmos/build
+cp /opt/gmos/gmos_linux_live.iso /mnt/gmos/build

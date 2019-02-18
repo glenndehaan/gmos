@@ -1,13 +1,22 @@
 ::sysinit:/etc/04_bootscript.sh
+
 ::restart:/sbin/init
+
 ::shutdown:echo -e "\nSyncing all file buffers."
 ::shutdown:sync
 ::shutdown:echo "Unmounting all filesystems."
 ::shutdown:umount -a -r
 ::shutdown:sleep 1
+
 ::ctrlaltdel:/sbin/reboot
+
 ::once:clear
 console::respawn:/sbin/getty console 0 linux
+
+#mess::sysinit:/bin/touch /var/log/messages
+#sysl:1:respawn:/sbin/syslogd -n -m 0
+#klog:1:respawn:/sbin/klogd -n
+
 tty2::once:cat /etc/motd
 tty2::respawn:/bin/bash
 tty3::once:cat /etc/motd
