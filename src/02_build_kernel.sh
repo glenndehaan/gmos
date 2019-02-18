@@ -32,7 +32,7 @@ else
   echo "Generated default kernel configuration."
 
   # Changes the name of the system to 'minimal'.
-  sed -i "s/.*CONFIG_DEFAULT_HOSTNAME.*/CONFIG_DEFAULT_HOSTNAME=\"minimal\"/" .config
+  sed -i "s/.*CONFIG_DEFAULT_HOSTNAME.*/CONFIG_DEFAULT_HOSTNAME=\"gmos\"/" .config
 
   # Enable overlay support, e.g. merge ro and rw directories (3.18+).
   sed -i "s/.*CONFIG_OVERLAY_FS.*/CONFIG_OVERLAY_FS=y/" .config

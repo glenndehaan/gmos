@@ -6,7 +6,7 @@
 ::shutdown:umount -a -r
 ::shutdown:sleep 1
 ::ctrlaltdel:/sbin/reboot
-::once:cat /etc/motd
+::once:clear
 console::respawn:/sbin/getty console 0 linux
 tty2::once:cat /etc/motd
 tty2::respawn:/bin/bash
