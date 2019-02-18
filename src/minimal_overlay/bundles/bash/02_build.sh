@@ -18,6 +18,9 @@ fi
 
 rm -rf $DEST_DIR
 
+mkdir -p $DEST_DIR/bin
+mkdir -p $DEST_DIR/etc
+
 echo "Configuring '$BUNDLE_NAME'."
 CFLAGS="$CFLAGS" ./configure \
     --prefix=/usr \
@@ -34,6 +37,15 @@ echo "Reducing '$BUNDLE_NAME' size."
 set +e
 strip -g $DEST_DIR/usr/bin/*
 set -e
+
+mv -vf $DEST_DIR/usr/bin/bash $DEST_DIR/bin
+
+cat > $DEST_DIR/etc/shells << "EOF"
+# List of acceptable shells for chpass(1).
+
+/bin/bash
+/bin/sh
+EOF
 
 # With '--remove-destination' all possibly existing soft links in
 # '$OVERLAY_ROOTFS' will be overwritten correctly.

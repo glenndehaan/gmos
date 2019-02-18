@@ -51,7 +51,7 @@ echo "root:x:0:" \
   > $DEST_DIR/etc/group
 
 # Add user root with password 'toor'.
-echo "root:AprZpdBUhZXss:0:0:Minimal Root,,,:/root:/bin/sh" \
+echo "root:AprZpdBUhZXss:0:0:Minimal Root,,,:/root:/bin/bash" \
   > $DEST_DIR/etc/passwd
 
 # Create home folder for root user.
