@@ -64,6 +64,8 @@ cp -r --remove-destination $DEST_DIR/sbin \
 mkdir -p "$OVERLAY_ROOTFS/etc/autorun"
 install -m 0755 "$SRC_DIR/00_sysklogd.sh" "$OVERLAY_ROOTFS/etc/autorun/"
 
+mkdir -p "$OVERLAY_ROOTFS/var/run"
+
 echo "Bundle 'sysklogd' has been installed."
 
 cd $SRC_DIR

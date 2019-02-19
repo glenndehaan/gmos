@@ -1,7 +1,6 @@
 #!/bin/sh
 
-#start_daemon syslogd
-#start_daemon /sbin/klogd
+syslogd -n &
 
 cat << CEOF
 [1m  Syslogd Started.[0m
