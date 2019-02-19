@@ -97,6 +97,7 @@ fi
 # Setup some environment variables.
 export HISTSIZE=1000
 export HISTIGNORE="&:[bf]g:exit"
+export EDITOR=nano
 
 # Set some defaults for graphical systems
 export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/share/}
