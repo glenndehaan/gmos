@@ -12,3 +12,4 @@
 gmos/
 _resources/
 build/gmos_linux_live.iso
+build/gmos_linux_live_mongodb.iso
