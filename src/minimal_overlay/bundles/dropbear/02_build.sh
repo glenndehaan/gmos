@@ -26,10 +26,10 @@ echo "Configuring 'Dropbear'."
   CFLAGS="$CFLAGS"
 
 echo "Building 'Dropbear'."
-make -j $NUM_JOBS
+make -j $NUM_JOBS PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp"
 
 echo "Installing 'Dropbear'."
-make -j $NUM_JOBS install DESTDIR="$DEST_DIR"
+make -j $NUM_JOBS PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp" install DESTDIR="$DEST_DIR"
 
 mkdir -p $DEST_DIR/etc/dropbear
 
